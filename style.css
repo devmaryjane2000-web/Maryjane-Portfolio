@@ -1,0 +1,1236 @@
+
+/* =========================================
+   DEV MARYJANE PORTFOLIO
+   LUXURY BLACK & GOLD RESPONSIVE DESIGN
+========================================= */
+
+/* 1. RESET AND GLOBAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #d4af37;
+    --gold-light: #f5d76e;
+    --gold-dark: #9c7a19;
+    --black: #080808;
+    --dark: #101010;
+    --dark-card: #151515;
+    --white: #ffffff;
+    --gray: #b5b5b5;
+    --border: rgba(212, 175, 55, 0.25);
+    --transition: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: #f5f5f5;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+section {
+    padding: 100px 8%;
+    scroll-margin-top: 80px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* 2. HEADER AND NAVIGATION */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 8%;
+    background: rgba(8, 8, 8, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.header.scrolled {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-mj {
+    color: var(--gold);
+    font-size: 28px;
+}
+
+.logo-name {
+    color: var(--white);
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #dddddd;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 18px;
+    background: var(--gold);
+    color: var(--black);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.nav-button:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-size: 25px;
+    width: 43px;
+    height: 43px;
+    border-radius: 5px;
+}
+
+
+/* 3. BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 1px solid var(--gold);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--gold);
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: var(--black);
+    transform: translateY(-3px);
+}
+
+.email-link {
+    cursor: pointer;
+}
+
+
+/* 4. SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    color: var(--white);
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.gold-text {
+    color: var(--gold);
+}
+
+.section-subtitle {
+    color: var(--gray);
+    max-width: 650px;
+    margin: auto;
+    font-size: 15px;
+}
+
+
+/* 5. HERO SECTION */
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+    padding-top: 140px;
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(212, 175, 55, 0.09),
+            transparent 35%
+        ),
+        var(--black);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 5vw, 75px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.hero-content .hero-description {
+    color: var(--gray);
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-socials {
+    margin-top: 30px;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-frame {
+    width: 100%;
+    max-width: 440px;
+    min-height: 380px;
+    background: linear-gradient(145deg, #1c1c1c, #080808);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.08);
+}
+
+.visual-top {
+    display: flex;
+    gap: 8px;
+    padding: 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.visual-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.visual-content {
+    position: relative;
+    padding: 50px 30px;
+    min-height: 320px;
+}
+
+.visual-small-text {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.visual-content h2 {
+    font-size: 35px;
+    line-height: 1.3;
+    margin-top: 25px;
+}
+
+.visual-line {
+    width: 65px;
+    height: 3px;
+    background: var(--gold);
+    margin: 25px 0;
+}
+
+.visual-content p {
+    color: var(--gray);
+}
+
+.visual-signature {
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    color: rgba(212, 175, 55, 0.15);
+    font-size: 75px;
+    font-weight: 900;
+}
+
+
+/* 6. ABOUT SECTION */
+
+.about {
+    background: var(--dark);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.about-text .btn {
+    margin-top: 10px;
+}
+
+.about-card {
+    background: linear-gradient(145deg, #1b1b1b, #090909);
+    border: 1px solid var(--border);
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about-card-inner {
+    padding: 30px 15px;
+}
+
+.about-initials {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    color: var(--white);
+    font-size: 25px;
+}
+
+.about-card p {
+    color: var(--gray);
+}
+
+.about-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 25px auto;
+}
+
+.about-card .about-card-quote {
+    font-style: italic;
+}
+
+
+/* 7. SKILLS SECTION */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
+}
+
+.skill-icon {
+    display: block;
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: var(--gold);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* 8. PROJECTS SECTION */
+
+.projects {
+    background: var(--dark);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.project-image {
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #252015, #101010);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-image-two {
+    background: linear-gradient(135deg, #191919, #30230b);
+}
+
+.project-image-three {
+    background: linear-gradient(135deg, #30230b, #111111);
+}
+
+.project-placeholder {
+    color: var(--gold);
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-category {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.project-info h3 {
+    color: var(--white);
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.project-info p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech span {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+
+/* 9. SERVICES SECTION */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 30px;
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-7px);
+}
+
+.service-number {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.service-card h3 {
+    color: var(--gold);
+    margin: 15px 0;
+    font-size: 19px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* 10. PRICING SECTION */
+
+.pricing {
+    background: var(--dark);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 35px;
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 35px rgba(212, 175, 55, 0.12);
+    transform: scale(1.03);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.03) translateY(-7px);
+}
+
+.pricing-label {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.pricing-card h3 {
+    color: var(--gold);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.pricing-card > p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.price {
+    margin-bottom: 20px;
+}
+
+.price-amount {
+    display: block;
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.price-note {
+    display: block;
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.pricing-card ul li {
+    color: var(--gray);
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.pricing-card ul li::before {
+    content: "✓ ";
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.pricing-card .btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+.pricing-disclaimer {
+    text-align: center;
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+
+/* 11. CONTACT SECTION */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-info h3 {
+    color: var(--gold);
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.contact-item h4 {
+    color: var(--white);
+}
+
+.contact-item p,
+.contact-item a {
+    color: var(--gray);
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+    color: var(--gold);
+}
+
+.contact-message {
+    background: linear-gradient(145deg, #1b1b1b, #090909);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-message-inner {
+    padding: 15px;
+}
+
+.contact-mj {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.contact-message h3 {
+    color: var(--gold);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-message p {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+
+/* 12. FOOTER */
+
+.footer {
+    background: #050505;
+    border-top: 1px solid var(--border);
+    padding: 35px 8%;
+    text-align: center;
+}
+
+.footer-logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.footer-note {
+    margin-top: 8px;
+}
+
+.copyright {
+    margin-top: 15px;
+}
+
+
+/* 13. JAVASCRIPT REVEAL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 14. ACCESSIBILITY */
+
+:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================
+   15. RESPONSIVE DESIGN
+========================================= */
+
+/* LARGE DESKTOPS */
+
+@media (min-width: 1400px) {
+    section {
+        padding: 120px 10%;
+    }
+
+    .header {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+
+/* LAPTOPS */
+
+@media (max-width: 1200px) {
+    .header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* TABLETS AND SMALL LAPTOPS */
+
+@media (max-width: 900px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 3;
+        flex-shrink: 0;
+    }
+
+    .nav-button {
+        margin-left: auto;
+        order: 2;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0b0b0b;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0 6%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            padding 0.3s ease;
+    }
+
+    .nav-links.active {
+        max-height: 600px;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 5px;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 140px;
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: 750px;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .visual-frame {
+        max-width: 550px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid,
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .pricing-card.featured:hover {
+        transform: translateY(-7px);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* MOBILE PHONES */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .header.scrolled {
+        padding: 11px 5%;
+    }
+
+    .logo {
+        gap: 6px;
+    }
+
+    .logo-mj {
+        font-size: 24px;
+    }
+
+    .logo-name {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .nav-button {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .menu-toggle {
+        width: 39px;
+        height: 39px;
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 125px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(36px, 9vw, 52px);
+    }
+
+    .hero-content h2 {
+        font-size: 19px;
+    }
+
+    .hero-content .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .visual-frame {
+        min-height: 320px;
+    }
+
+    .visual-content {
+        padding: 35px 22px;
+    }
+
+    .visual-content h2 {
+        font-size: 28px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .section-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill-card,
+    .service-card,
+    .pricing-card {
+        padding: 25px;
+    }
+
+    .about-text h3 {
+        font-size: 24px;
+    }
+
+    .about-card {
+        padding: 20px;
+    }
+
+    .project-image {
+        min-height: 180px;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .pricing-card .btn {
+        width: 100%;
+    }
+
+    .contact-message {
+        padding: 25px 15px;
+    }
+
+    .footer {
+        padding: 30px 5%;
+    }
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    section {
+        padding: 60px 16px;
+    }
+
+    .header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .logo-name {
+        font-size: 10px;
+    }
+
+    .nav-button {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 33px;
+    }
+
+    .hero-content h2 {
+        font-size: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .btn {
+        padding: 12px 16px;
+        font-size: 12px;
+    }
+
+    .pricing-card {
+        padding: 20px;
+    }
+
+    .price-amount {
+        font-size: 27px;
+    }
+
+}
+
+
+/* END OF DEV MARYJANE PORTFOLIO CSS */
